@@ -11,3 +11,11 @@
 // git add
 // git commit -m "18일 숙제완료"
 // git push origin main
+
+
+for (let i = 0; i < 5; i++) {
+  
+Math.floor(Math.random() * (100 - 31 + 1)) + 31;
+
+}
+console.log()
