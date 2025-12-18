@@ -3,7 +3,7 @@
 // Dev/fun_javascript = git clone git주소.
 // 이름, 연락처, 주소 정보를 입력하면
 // 콘솔에 "이름은 홍길동, 전화전호는 01-1212-3434, 주소는 대구 중구 100번지"
-// git add.
+// git add. *
 // git commit -m "12/17 숙제완료"
 // git push - u origin main
 
@@ -13,3 +13,5 @@
  console.log('이름은 '+ myNamename);
  console.log('전화번호는 ' + phone);
  console.log('주소는 ' + address);
+
+// console.log(`이름은 ${name}, 전화번호는 ${phone}, 주소는 ${address}`);
