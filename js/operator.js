@@ -19,4 +19,7 @@ result = num1 > num2 && num1 == str1; // AND 연산자.
 result = !(num1 > num2 && num1 == str1); // NOT 연산자.
 result = !result;
 result = !result;
+
 console.log(result);
+
+

@@ -12,6 +12,6 @@ switch (msg) {
   case 'C':
     console.log('C를 입력.');
     break;
-    default:
-      console.log('A,B,C중에 입력.')
+  default:
+    console.log('A,B,C중에 입력.')
 }
