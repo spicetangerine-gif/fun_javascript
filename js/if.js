@@ -7,7 +7,7 @@
 
 let x = Math.floor(Math.random() * 10) + 1; // 0 <= x < 1
 console.log(x);
-
+//
 if (x % 2 == 1 && x >= 5) {
   console.log("조건을 만족합니다.");
 } else {

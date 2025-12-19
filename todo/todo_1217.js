@@ -1,4 +1,4 @@
-<<<<<<< HEAD:todo/todo_1217.js
+// HEAD:todo/todo_1217.js
 // 15-2, 15-3 장을 정독.
 // git 설치.
 // Dev/fun_javascript = git clone git주소.
@@ -9,13 +9,13 @@
 // git commit -m "12/17 숙제완료"
 // git push - u origin main
 
-let myNamename = prompt('이름');
-let phone = prompt('연락처');
-let address = prompt('주소');
-console.log('이름은 ' + myNamename);
-console.log('전화번호는 ' + phone);
-console.log('주소는 ' + address);
-=======
+// let myNamename = prompt('이름');
+// let phone = prompt('연락처');
+// let address = prompt('주소');
+// console.log('이름은 ' + myNamename);
+// console.log('전화번호는 ' + phone);
+// console.log('주소는 ' + address);
+
 // 15-2, 15-3 장을 정독.
 // git 설치.
 // Dev/fun_javascript = git clone git주소.
@@ -33,4 +33,3 @@ console.log('주소는 ' + address);
  console.log('주소는 ' + address);
 
 // console.log(`이름은 ${name}, 전화번호는 ${phone}, 주소는 ${address}`);
->>>>>>> 8d32fa6e6406d2410a8f6fa1ef992a98979465cf:todo_1217.js
