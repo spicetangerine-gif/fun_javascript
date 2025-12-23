@@ -19,8 +19,7 @@ if (idx == -1) {
 } else {
   nameAry.splice(idx, 1);
 }
-//목록확인
-
+// 목록확인.
 nameAry.forEach((elem) => {
   console.log(elem);
 });

@@ -2,9 +2,8 @@
 // 값 / 기능
 // num = 0;
 // doIt = function() {
-//         기능실행.   
+//         기능실행.
 // }
-
 
 // for (let i = 1; i <= 5; i += 1) {
 //
@@ -61,15 +60,13 @@
 // 반 평균 = 합계점수 / 사람의 수
 // "평균은 75점입니다."
 
-
 sum = 0;
 let count = 0;
 // 최고득점
 let maxScore = 0;
 while (true) {
-  
-  let yourValue = prompt('학생의 점수를 입력하세요. 종료하면 quit 입력.')
-  if (yourValue == 'quit') {
+  let yourValue = prompt("학생의 점수를 입력하세요. 종료하면 quit 입력.");
+  if (yourValue == "quit") {
     break; // while 반복을 종료.
   }
   yourValue = parseInt(yourValue);
@@ -77,10 +74,10 @@ while (true) {
   count++; //학생수
 
   // 조건 : 현재 최고점수 vs. yourValue 비교해서
- //현재값이 최고점수보다 크면 현재값을 최고점수에 대입 
- if (maxScore < yourValue) {
-   maxScore = yourValue;
- }
+  //현재값이 최고점수보다 크면 현재값을 최고점수에 대입
+  if (maxScore < yourValue) {
+    maxScore = yourValue;
+  }
 
-  console.log(`평균: ${sum/count}, 최고점수: ${maxScore}`);
+  console.log(`평균: ${sum / count}, 최고점수: ${maxScore}`);
 }
