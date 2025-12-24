@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Programming</title>
+    <link rel="stylesheet" href="css/subject.css" />
+    <style>
+      .cancel {
+        text-decoration: line-through;
+        color: gray;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Web Programming</h1>
+      <p>공부할 주제를 기록해 보세요</p>
+      <form name="addForm" action="index.html">
+        <label for="subject" class="hidden">주제</label>
+        <input type="text" id="subject" autofocus />
+        <button type="submit">추가</button>
+      </form>
+      <hr />
+      <ul id="itemList"></ul>
+    </div>
+    <script>
+      // form에 submit 이벤트 등록
+      // 이벤트가 전파 차단(e.stopPropagation())
+      // 상위 -> 하위 : 캡쳐링, 하위 -> 상위 : 버블링.
+      document
+        .querySelector('form[name="addForm"]') //
+        .addEventListener("submit", (e) => {
+          e.preventDefault(); // sumit 차단.
+          let title = document.querySelector("#subject").value; // 입력갑
+          // 입력값 체크.
+          if (!title) {
+            alert("값을 입력하세요");
+            return; // 함수종료.
+          }
+          let liTag = document.createElement("li"); // <li></li>
+          liTag.innerText = title;
+          liTag.addEventListener(
+            "click",
+            (e) => {
+              console.log(e.target.tagName); // 'BUTTON', 'LI'
+              let target = e.target;
+              if (e.target.tagName == "BUTTON") {
+                target = e.target.parentElement;
+                e.stopImmediatePropagation(); // 이벤트전파 차단.
+              }
+
+              // 요소의 클래스목록(classList)
+              target.classList.toggle("cancel");
+              // if (e.target.classList.contains("cancel")) {
+              //   e.target.classList.remove("cancel");
+              // } else {
+              //   e.target.classList.add("cancel");
+              // }
+              // e.target.className = "cancel light standard"; // <li class="cancel light standard"></li>
+              // console.log(e.target.classList);
+            },
+            true
+          );
+          // <button>삭제</button> => delBtn 변수.
+          let delBtn = document.createElement("button");
+          delBtn.innerText = "삭제";
+          liTag.appendChild(delBtn);
+          delBtn.addEventListener(
+            "click",
+            (e) => {
+              e.target.parentElement.remove();
+            },
+            true
+          );
+          // ul 선택
+          document.querySelector("#itemList").appendChild(liTag);
+          // 초기화.
+          document.querySelector("#subject").value = "";
+          document.querySelector("#subject").focus();
+        });
+    </script>
+  </body>
+</html>
