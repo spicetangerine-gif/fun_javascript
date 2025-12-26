@@ -81,7 +81,7 @@ function makeTr(student = {}) {
 // 삭제버튼에 이벤트핸들러.
 function deleteRowFnc(e) {
   console.log(this.dataset.sno);
-  let delNo = this.dataset.sno;
-  students = students.filter((elem) => elem.studNo != delNo);
+  let delNo = this.dataset.sno; // 삭제할 학생번호
+  students = students.filter((elem) => elem.studNo != delNo); // 조건을 만족하는 배열 생성.
   makeList();
 }

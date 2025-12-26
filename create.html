@@ -53,13 +53,13 @@
 
               // 요소의 클래스목록(classList)
               target.classList.toggle("cancel");
-              // if (e.target.classList.contains("cancel")) {
-              //   e.target.classList.remove("cancel");
-              // } else {
-              //   e.target.classList.add("cancel");
-              // }
-              // e.target.className = "cancel light standard"; // <li class="cancel light standard"></li>
-              // console.log(e.target.classList);
+              if (e.target.classList.contains("cancel")) {
+                e.target.classList.remove("cancel");
+              } else {
+                e.target.classList.add("cancel");
+              }
+              e.target.className = "cancel light standard"; // <li class="cancel light standard"></li>
+              console.log(e.target.classList);
             },
             true
           );
