@@ -27,7 +27,7 @@ document
     // // 중복값체크.
     // for (let student of students) {
     //   if (student.studNo == studNo) {
-    //     alert("동일한 한생번호 존재합니다.");
+    //     alert("동일한 학생번호 존재합니다.");
     //   return;
     // }
     // }
