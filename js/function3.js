@@ -4,17 +4,24 @@ let page = 1; // 현재페이지.
 //////////////////////// 함수들 ////////////////////////////
 // 함수(member => tr>td:(id),td(fn),td(ln),td(salary))
 function makeTr(member) {
-  const fields = ["id", "first_name", "last_name", "salary"];
-  const trTag = document.createElement("tr");
-  // td*4 생성.
-  for (let field of fields) {
-    const tdTag = document.createElement("td"); // <td></td>
-    tdTag.innerText = member[field];
-    // appendChild.
-    trTag.appendChild(tdTag);
-  }
-  // tr반환.
-  return trTag;
+  const makeTr = `<tr><td>${member.id}</td>
+                      <td>${member.first_name}</td>
+                      <td>${member.last_name}</td>
+                      <td>${member.salary}</td> 
+                                    </tr>`;
+  target.insertAdjacentHTML("beforeend", makeTr);
+
+  // const fields = ["id", "first_name", "last_name", "salary"];
+  // const trTag = document.createElement("tr");
+  // // td*4 생성.
+  // for (let field of fields) {
+  //   const tdTag = document.createElement("td"); // <td></td>
+  //   tdTag.innerText = member[field];
+  //   // appendChild.
+  //   trTag.appendChild(tdTag);
+  // }
+  // // tr반환.
+  // return trTag;
 }
 
 // 멤버 수만큼 tr 생성.
@@ -34,8 +41,7 @@ function showPageList(pg = 1) {
 
   // 배열의 건수만큼 화면출력.
   for (let elem of pageAry) {
-    const newTr = makeTr(elem);
-    target.appendChild(newTr);
+    makeTr(elem);
   }
 } // end of showPageList().
 showPageList();
@@ -65,55 +71,42 @@ function generatePagingList() {
   // <li class="page-item"><a class="page-link" href="#">1</a></li>
 
   // <1. Previous>부분 생성.
-  let liTag = document.createElement("li");
-  liTag.className = "page-item"; // 클래스 추가.
-  let ahref = document.createElement("a");
-  ahref.className = "page-link"; // 클래스 추가.
-  ahref.innerText = "Previous";
-  ahref.setAttribute("data-page", startPage - 1);
-  if (prev) {
-    ahref.setAttribute("href", "#"); // href속성 추가.
-  } else {
-    liTag.classList.add("disabled"); // class에 disabled 추가.
-  }
-  // 부모-자식.
-  liTag.appendChild(ahref);
-  ulPagination.appendChild(liTag);
+  const prevStr = `<li class="page-item ${prev ? "" : "disabled"}">
+                     <a class="page-link" data-page="${
+                       startPage - 1
+                     }">Previous</a>
+                   </li>`;
+  ulPagination.insertAdjacentHTML("beforeend", prevStr);
 
   // 2. 페이지 수만큼 출력.
   for (let p = startPage; p <= endPage; p++) {
-    const liTag = document.createElement("li");
-    liTag.className = "page-item";
-    const ahref = document.createElement("a");
-    ahref.className = "page-link";
-    ahref.setAttribute("href", "#");
-    ahref.innerText = p;
-    ahref.setAttribute("data-page", p);
-    // 현재 페이지에 스타일 추가.
-    if (p == page) {
-      liTag.classList.add("active"); // 클래스값 추가.
-      liTag.setAttribute("aria-current", "page"); // attribute 지정.
-    }
-    // 부모-자식.
-    liTag.appendChild(ahref);
-    ulPagination.appendChild(liTag);
+    const pageStr = `<li class="page-item ${p == page ? "active" : ""}"
+                        aria-current=${p == page ? "page" : ""}>
+                      <a class="page-link" href="#" data-page=${p}>${p}</a>
+                     </li>`;
+    ulPagination.insertAdjacentHTML("beforeend", pageStr);
   }
 
   // <3. Next>부분 생성.
-  liTag = document.createElement("li");
-  liTag.className = "page-item";
-  ahref = document.createElement("a");
-  ahref.className = "page-link";
-  ahref.innerText = "Next";
-  ahref.setAttribute("data-page", endPage + 1);
-  if (next) {
-    ahref.setAttribute("href", "#"); // href속성 추가.
-  } else {
-    liTag.classList.add("disabled"); // class에 disabled 추가.
-  }
-  // 부모-자식.
-  liTag.appendChild(ahref);
-  ulPagination.appendChild(liTag);
+  const nextStr = `<li class="page-item ${next ? "" : "disabled"}">
+                     <a class="page-link" data-page="${endPage + 1}">Next</a>
+                   </li>`;
+  ulPagination.insertAdjacentHTML("beforeend", nextStr);
+
+  // liTag = document.createElement("li");
+  // liTag.className = "page-item";
+  // ahref = document.createElement("a");
+  // ahref.className = "page-link";
+  // ahref.innerText = "Next";
+  // ahref.setAttribute("data-page", endPage + 1);
+  // if (next) {
+  //   ahref.setAttribute("href", "#"); // href속성 추가.
+  // } else {
+  //   liTag.classList.add("disabled"); // class에 disabled 추가.
+  // }
+  // // 부모-자식.
+  // liTag.appendChild(ahref);
+  // ulPagination.appendChild(liTag);
 } // end of generatePagingList().
 generatePagingList();
 
