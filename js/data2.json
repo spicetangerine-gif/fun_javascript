@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "first_name": "Bree",
+    "last_name": "Towers",
+    "email": "btowers0@ftc.gov",
+    "gender": "Female",
+    "salary": 15199
+  },
+  {
+    "id": 2,
+    "first_name": "Kala",
+    "last_name": "Barrable",
+    "email": "kbarrable1@ted.com",
+    "gender": "Female",
+    "salary": 15182
+  },
+  {
+    "id": 3,
+    "first_name": "Britte",
+    "last_name": "Lissandre",
+    "email": "blissandre2@pagesperso-orange.fr",
+    "gender": "Female",
+    "salary": 10772
+  },
+  {
+    "id": 4,
+    "first_name": "Jeremy",
+    "last_name": "Laskey",
+    "email": "jlaskey3@sciencedirect.com",
+    "gender": "Male",
+    "salary": 12589
+  },
+  {
+    "id": 5,
+    "first_name": "Rhianon",
+    "last_name": "Gillivrie",
+    "email": "rgillivrie4@cargocollective.com",
+    "gender": "Female",
+    "salary": 18987
+  },
+  {
+    "id": 6,
+    "first_name": "Berne",
+    "last_name": "Aindriu",
+    "email": "baindriu5@stanford.edu",
+    "gender": "Male",
+    "salary": 11318
+  },
+  {
+    "id": 7,
+    "first_name": "Mylo",
+    "last_name": "Matchett",
+    "email": "mmatchett6@artisteer.com",
+    "gender": "Male",
+    "salary": 9968
+  },
+  {
+    "id": 8,
+    "first_name": "Eirena",
+    "last_name": "Liddicoat",
+    "email": "eliddicoat7@wordpress.org",
+    "gender": "Female",
+    "salary": 5350
+  },
+  {
+    "id": 9,
+    "first_name": "Michail",
+    "last_name": "Linskey",
+    "email": "mlinskey8@technorati.com",
+    "gender": "Male",
+    "salary": 9010
+  },
+  {
+    "id": 10,
+    "first_name": "Barnebas",
+    "last_name": "Martlew",
+    "email": "bmartlew9@theglobeandmail.com",
+    "gender": "Male",
+    "salary": 19543
+  },
+  {
+    "id": 11,
+    "first_name": "Elton",
+    "last_name": "Sneezum",
+    "email": "esneezuma@paginegialle.it",
+    "gender": "Male",
+    "salary": 11396
+  },
+  {
+    "id": 12,
+    "first_name": "Jayne",
+    "last_name": "Mussington",
+    "email": "jmussingtonb@walmart.com",
+    "gender": "Female",
+    "salary": 8019
+  },
+  {
+    "id": 13,
+    "first_name": "Tull",
+    "last_name": "Tommaseo",
+    "email": "ttommaseoc@timesonline.co.uk",
+    "gender": "Male",
+    "salary": 16621
+  },
+  {
+    "id": 14,
+    "first_name": "Paule",
+    "last_name": "Moro",
+    "email": "pmorod@un.org",
+    "gender": "Female",
+    "salary": 19275
+  },
+  {
+    "id": 15,
+    "first_name": "Daron",
+    "last_name": "Clapson",
+    "email": "dclapsone@prlog.org",
+    "gender": "Female",
+    "salary": 8717
+  }
+]
